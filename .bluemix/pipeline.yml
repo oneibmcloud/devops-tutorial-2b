@@ -6,6 +6,7 @@ stages:
         branch: master
     triggers:
       - type: commit
+        enabled: false
     jobs:
       - name: Changelog
         type: builder

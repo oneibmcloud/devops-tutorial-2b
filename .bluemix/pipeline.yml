@@ -24,7 +24,7 @@ stages:
           echo Downloading and extracting archive...
           curl -s -L -o node_modules.tar.gz https://github.com/interconnect5355/tutorial2_node/blob/master/node_modules.tar.gz\?raw\=true
           tar -xzf node_modules.tar.gz
-          npm install -g npm@3.7.1
+          # npm install -g npm@3.7.1
           npm install
           rm -rf node_modules          
   - name: 'Run Unit Tests'

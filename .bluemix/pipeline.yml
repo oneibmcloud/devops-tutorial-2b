@@ -81,7 +81,6 @@ stages:
           application: '${CF_APP}'
         script: |-
           #!/bin/bash
-          tar -xzf node_modules.tar.gz
           cf push "${CF_APP}-test-blue" -n "${CF_APP}-test"
           cf delete "${CF_APP}-test-green" --f
           cf rename "${CF_APP}-test-blue" "${CF_APP}-test-green"

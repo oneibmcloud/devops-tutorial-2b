@@ -21,6 +21,9 @@ stages:
         build_type: npm
         script: |-
           #!/bin/bash
+          echo Downloading and extracting archive...
+          curl -s -L -o node_modules.zip https://github.com/interconnect5355/tutorial2_node/blob/master/node_modules.zip\?raw\=true
+          unzip -q node_modules.zip && rm node_modules.zip
           npm install -g npm@3.7.1
           npm install
   - name: 'Run Unit Tests'

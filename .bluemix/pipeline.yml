@@ -136,7 +136,6 @@ stages:
           application: '${CF_APP}'
         script: |-
           #!/bin/bash
-          tar -xzf node_modules.tar.gz
           cf push "${CF_APP}-blue" -n "${CF_APP}" --no-start
           export CF_APP_NAME="$CF_APP"
           cf start "${CF_APP}-blue"
